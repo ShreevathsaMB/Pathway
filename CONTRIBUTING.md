@@ -83,3 +83,4 @@ Open a [GitHub Discussion](../../discussions) or file an [Issue](../../issues) �
 ---
 
 Built with ❤️ to help people find their pathway to peace.
+

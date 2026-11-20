@@ -32,12 +32,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     # Third-party apps
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
-    
+
     # Pathway apps
     'users',
     'tasks',
@@ -49,9 +49,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  # CORS middleware
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',  # Multi-language support
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -80,42 +80,29 @@ TEMPLATES = [
 WSGI_APPLICATION = 'pathway.wsgi.application'
 
 
-# Database - Using SQLite for Django's built-in features
-# MongoDB will be used via Mongoengine for flexible data
+# Database — PostgreSQL
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME', 'pathway'),
+        'USER': os.getenv('DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
-
-# MongoDB Configuration (using Mongoengine)
-import mongoengine
-MONGODB_SETTINGS = {
-    'db': os.getenv('MONGODB_DB', 'pathway'),
-    'host': os.getenv('MONGODB_HOST', 'mongodb://localhost:27017/pathway'),
-}
-mongoengine.connect(**MONGODB_SETTINGS)
 
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
 
-# Internationalization - Multi-language support
+# Internationalization — Multi-language support
 LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
@@ -127,7 +114,7 @@ LANGUAGES = [
     ('ml', 'Malayalam'),
 ]
 
-TIME_ZONE = 'Asia/Kolkata'  # Indian Standard Time
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 USE_L10N = True
@@ -138,7 +125,7 @@ LOCALE_PATHS = [
 ]
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
@@ -151,7 +138,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Django REST Framework settings
+# Django REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -183,7 +170,7 @@ CORS_ALLOWED_ORIGINS = os.getenv(
 CORS_ALLOW_CREDENTIALS = True
 
 
-# Anthropic API Key for AI Companion
+# NVIDIA NIM API Key for AI Companion
 ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
 
 
