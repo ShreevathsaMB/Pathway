@@ -249,3 +249,16 @@ To create a safe, supportive digital space where people can:
 ---
 
 Built with ❤️ to help people find their pathway to peace.
+
+
+## ?? Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started, what areas need help most, and how to open a pull request.
+
+## ?? Security
+
+If you find a security vulnerability, please **do not** open a public issue. Read [SECURITY.md](SECURITY.md) for how to report it privately.
+
+## ?? License
+
+MIT � see [LICENSE](LICENSE) for details.
