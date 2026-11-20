@@ -17,7 +17,7 @@ Pathway is currently in early development. Security fixes are applied to the lat
 
 If you discover a security issue — especially one that could expose user data, allow unauthorized access, or put vulnerable users at risk — please report it privately:
 
-**Email:** vathsa2004@gmail.com  
+**Email:** pathway.support@gmail.com
 **Subject:** `[SECURITY] Pathway – <brief description>`
 
 Include in your report:
