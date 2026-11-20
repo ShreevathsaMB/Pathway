@@ -1,0 +1,40 @@
+# ============================================================
+#  Pathway – root .gitignore
+# ============================================================
+
+# ----- Python / Django (backend) ----------------------------
+pathway-backend/.env
+pathway-backend/db.sqlite3
+pathway-backend/venv/
+pathway-backend/__pycache__/
+pathway-backend/**/__pycache__/
+pathway-backend/**/*.pyc
+pathway-backend/**/*.pyo
+pathway-backend/media/
+pathway-backend/backups/
+pathway-backend/*.egg-info/
+pathway-backend/.pytest_cache/
+
+# ----- Node / Vite (frontend) --------------------------------
+pathway-frontend/node_modules/
+pathway-frontend/dist/
+pathway-frontend/dist-ssr/
+pathway-frontend/*.local
+
+# ----- OS / editor junk -------------------------------------
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ----- Logs --------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+
