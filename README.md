@@ -33,15 +33,17 @@ pathway/
 
 ## 📸 Screenshots
 
-### Desktop
 | Home Dashboard | AI Companion |
 |---|---|
 | ![Home](screenshots/desktop-home-check.png) | ![AI Companion](screenshots/desktop-ai-check.png) |
 
-### Mobile
-| Landing Page | Daily Tasks |
+| Tasks & Daily Missions | Community |
 |---|---|
-| ![Landing](screenshots/mobile-landing-page.png) | ![Tasks](screenshots/mobile-tasks.png) |
+| ![Tasks](screenshots/taskpage.png) | ![Community](screenshots/communitypage.png) |
+
+| Resources Library | Mobile Landing |
+|---|---|
+| ![Resources](screenshots/resource%20page.png) | ![Landing](screenshots/mobile-landing-page.png) |
 
 ---
 
