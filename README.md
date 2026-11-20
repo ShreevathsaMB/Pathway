@@ -33,17 +33,15 @@ pathway/
 
 ## 📸 Screenshots
 
-| Home (Desktop) | AI Companion (Desktop) |
+### Desktop
+| Home Dashboard | AI Companion |
 |---|---|
 | ![Home](screenshots/desktop-home-check.png) | ![AI Companion](screenshots/desktop-ai-check.png) |
 
-| Landing Page (Mobile) | Tasks (Mobile) |
+### Mobile
+| Landing Page | Daily Tasks |
 |---|---|
 | ![Landing](screenshots/mobile-landing-page.png) | ![Tasks](screenshots/mobile-tasks.png) |
-
-| Mobile Landing | Mobile AI Chat |
-|---|---|
-| ![Mobile](screenshots/mobile-landing.png) | ![AI Chat](screenshots/mobile-ai-chat-2.png) |
 
 ---
 
@@ -69,8 +67,8 @@ pathway/
 
 4. **Configure environment**
    - Copy `.env.example` to `.env`
-   - Add your Anthropic API key
-   - Configure MongoDB connection
+   - Add your NVIDIA NIM API key (get a free one at https://build.nvidia.com)
+   - Configure your MongoDB connection string
 
 5. **Run migrations**
    ```bash
@@ -105,7 +103,7 @@ powershell -ExecutionPolicy Bypass -File .\dev.ps1
 - Python 3.9+
 - Node.js 18+ (for frontend)
 - MongoDB (local or Atlas)
-- Anthropic API key
+- NVIDIA NIM API key (free at https://build.nvidia.com)
 
 ## 🗄️ Database Setup
 
@@ -123,10 +121,10 @@ powershell -ExecutionPolicy Bypass -File .\dev.ps1
 
 ## 🤖 AI Companion
 
-Get your Anthropic API key:
-1. Visit https://console.anthropic.com/
-2. Create account and get API key
-3. Add to `.env`: `ANTHROPIC_API_KEY=your-key`
+The AI companion uses the **NVIDIA NIM API**. To get a free key:
+1. Visit https://build.nvidia.com
+2. Sign up and generate an API key
+3. Add to `.env`: `ANTHROPIC_API_KEY=your-nvidia-key`
 
 ## 📡 API Documentation
 
