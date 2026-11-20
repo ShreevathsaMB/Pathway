@@ -151,6 +151,30 @@ export default function Safety() {
                 {/* ══════════ MAIN COLUMN ══════════ */}
                 <div className="tm-main">
 
+                    {/* India disclaimer banner */}
+                    <div style={{
+                        background: 'rgba(251,191,36,0.1)',
+                        border: '1px solid rgba(251,191,36,0.3)',
+                        borderRadius: '12px',
+                        padding: '0.75rem 1rem',
+                        marginBottom: '1.25rem',
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: '0.6rem',
+                        fontSize: '0.85rem',
+                        color: '#fbbf24',
+                        lineHeight: 1.5
+                    }}>
+                        <span style={{ fontSize: '1.1rem', marginTop: '1px' }}>🇮🇳</span>
+                        <span>
+                            <strong>India-specific content:</strong> Helpline numbers and legal references
+                            (IPC, POCSO, IT Act) are currently based on Indian law.
+                            Numbers shown are for reference — please verify before calling.
+                            Outside India? Check your local emergency services.{' '}
+                            <strong>Contributors welcome to add support for other countries!</strong>
+                        </span>
+                    </div>
+
                     {/* Header */}
                     <div className="tm-header-card" style={{ marginBottom: '2rem' }}>
                         <div className="tm-header-left">

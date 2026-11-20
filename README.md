@@ -236,14 +236,6 @@ Access at: `http://localhost:8000/admin/`
 - **MongoDB Setup**: See `MONGODB_SETUP.md`
 - **API Docs**: Available after starting server
 
-## 🆘 Important Note
-
-**This application is a support tool, not a replacement for professional mental health care.**
-
-If you're in crisis:
-- India: Call 1800-599-0019 (AASRA)
-- Emergency: 112
-- Women Helpline: 181
 
 ## 💡 Vision
 
